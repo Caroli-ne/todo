@@ -1,0 +1,34 @@
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: #66cec9ec;
+  color: #025e82;
+  padding: 30px;
+  background-image: url('./img/bluesky.png');
+  background-position: center;
+  background-size:cover;
+}
+
+.app {
+  margin: 0 auto 500px;
+  padding: 25px 25px;
+  border-radius: 15px;
+  max-width: 575px;
+  background-color:azure;
+  
+}
+
+input {
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+}
+
+button {
+  margin: 5px;
+}
+
+p{
+  margin:10px 0;
+}
