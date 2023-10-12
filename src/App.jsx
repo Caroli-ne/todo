@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import "./App.css";
+
 import Todo from './components/Todo';
 import Todoform from './components/Todoform';
+import Search from './components/Search';
 
 function App() {
   const[todos, setTodos] = useState([
@@ -51,10 +53,16 @@ const completeTodo = (id) => {
   setTodos(newTodos);
 }
 
+const [search,setSearch] = useState("");
+
+
+
   return <div className="app">
     <h1>Lista de Tarefas</h1>
+    <Search search={search} setSearch={setSearch}/>
     <div className="todoList">
-      {todos.map((todo) => (
+      {todos.filter((todo) => todo.text.toLowerCase().includes(search.toLocaleLowerCase())
+      ).map((todo) => (
         <Todo key={todo.id} todo={todo} deleteTodo={deleteTodo} completeTodo={completeTodo} />
       ))}
     </div>
