@@ -1,24 +1,26 @@
 import { useState } from 'react'
 import "./App.css";
+import Todo from './components/Todo';
+import Todoform from './components/Todoform';
 
 function App() {
   const[todos, setTodos] = useState([
     {
       id:1,
       text: "Criar funcionalidade no sistema",
-      category:"Trabalho",
+      category:"Urgente",
       completed:false,
     },
     {
       id:2,
-      text:"Ir para a academia",
-      category:"Pessoal",
+      text:"Consertar o cano da pia",
+      category:"Importante",
       completed:false,
     },
     {
       id:3,
       text:"Estudar React",
-      category:"Estudos",
+      category:"Circunstancial",
       completed:false,
     },
   ]);
@@ -27,19 +29,10 @@ function App() {
     <h1>Lista de Tarefas</h1>
     <div className="todoList">
       {todos.map((todo) => (
-        <div className="todo">
-          <div className="content">
-            <p>{todo.text}</p>
-            <p className="category">{todo.category}</p>
-          </div>
-          <div>
-            <button>Completar</button>
-            <button>Editar</button>
-            <button>X</button>
-          </div>
-        </div>
+        <Todo todo={todo} />
       ))}
     </div>
+    <Todoform />
   </div>;
 }
 
