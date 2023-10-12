@@ -9,10 +9,10 @@ body {
 }
 
 .app {
-  margin: 0 auto 500px;
+  margin: 0 auto 100px;
   padding: 25px 25px;
   border-radius: 15px;
-  max-width: 575px;
+  max-width: 600px;
   background-color:azure;
   
 }
@@ -26,8 +26,8 @@ h1 {
 }
 
 button {
-  margin: 5px;
   cursor: pointer;
+  margin: 3px;
   border-radius: 5px;
   border: none;
   padding: 3px 15px;
@@ -42,13 +42,13 @@ p{
   margin:10px 0;
 }
 
-.exclude {
+.delete {
   background-color: rgb(199, 20, 20);
   color: azure;
   opacity: 0.8;  
 }
 
-.exclude:hover{
+.delete:hover{
   opacity: 1.0;
   background-color: rgb(199, 20, 20);
 }
@@ -71,4 +71,35 @@ p{
 .complete:hover{
 background-color: rgb(29, 212, 29);
 opacity:1.0;
+}
+
+input {
+  box-sizing: border-box;
+}
+.todo{
+  padding:10px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px #025e82;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.todoForm {
+  padding: bottom 1.5rem;;
+}
+
+.todoList{
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #025e82;
+}
+
+input, select {
+  padding: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border:1px solid #025e82;
 }
