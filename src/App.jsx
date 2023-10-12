@@ -4,12 +4,13 @@ import "./App.css";
 import Todo from './components/Todo';
 import Todoform from './components/Todoform';
 import Search from './components/Search';
+import Filter from './components/Filter';
 
 function App() {
   const[todos, setTodos] = useState([
     {
       id:1,
-      text: "Criar funcionalidade no sistema",
+      text: "Comprar ração para os gatos",
       category:"Urgente",
       completed:false,
     },
@@ -60,6 +61,7 @@ const [search,setSearch] = useState("");
   return <div className="app">
     <h1>Lista de Tarefas</h1>
     <Search search={search} setSearch={setSearch}/>
+    <Filter></Filter>
     <div className="todoList">
       {todos.filter((todo) => todo.text.toLowerCase().includes(search.toLocaleLowerCase())
       ).map((todo) => (
