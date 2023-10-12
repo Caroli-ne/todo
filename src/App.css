@@ -27,8 +27,48 @@ h1 {
 
 button {
   margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  padding: 3px 15px;
+  transition: 0.3s;
+  color: azure;
+  background-color: #025e82;
 }
-
+button:hover{
+background-color: #78dcfc;
+}
 p{
   margin:10px 0;
+}
+
+.exclude {
+  background-color: rgb(199, 20, 20);
+  color: azure;
+  opacity: 0.8;  
+}
+
+.exclude:hover{
+  opacity: 1.0;
+  background-color: rgb(199, 20, 20);
+}
+
+.edit { 
+  opacity: 0.7;
+  color: azure;
+  background-color: #25ebe1ec;
+}
+
+.edit:hover{
+  opacity:1.0;
+  background-color: #25ebe1ec;
+} 
+.complete {
+  background-color: rgb(29, 212, 29);
+  opacity: 0.8;
+}
+
+.complete:hover{
+background-color: rgb(29, 212, 29);
+opacity:1.0;
 }
