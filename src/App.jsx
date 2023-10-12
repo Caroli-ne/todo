@@ -25,14 +25,40 @@ function App() {
     },
   ]);
 
+  const addTodo = (text, category) =>{
+    
+    const newTodos = [...todos,{
+      id:Math.floor(Math.random() * 10000),
+      text,
+      category,
+      completed: false,
+    },
+  ];
+  setTodos(newTodos);
+};
+
+const deleteTodo = (id) => {
+  const newTodos = [...todos]
+  const filteredTodos = newTodos.filter((todo) => 
+    todo.id !== id ? todo:null
+  );
+  setTodos(filteredTodos);
+}
+
+const completeTodo = (id) => {
+  const newTodos = [...todos]
+  newTodos.map((todo) => todo.id === id? todo.completed = !todo.completed :todo )
+  setTodos(newTodos);
+}
+
   return <div className="app">
     <h1>Lista de Tarefas</h1>
     <div className="todoList">
       {todos.map((todo) => (
-        <Todo todo={todo} />
+        <Todo key={todo.id} todo={todo} deleteTodo={deleteTodo} completeTodo={completeTodo} />
       ))}
     </div>
-    <Todoform />
+    <Todoform addTodo={addTodo}/>
   </div>;
 }
 
