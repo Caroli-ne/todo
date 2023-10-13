@@ -1,9 +1,8 @@
 body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  background-color: #66cec9ec;
+  background-color: #025e82;
   color: #025e82;
   padding: 30px;
-  background-image: url('./img/bluesky.png');
   background-position: center;
   background-size:cover;
 }
@@ -14,7 +13,6 @@ body {
   border-radius: 15px;
   max-width: 600px;
   background-color:azure;
-  
 }
 
 input {
@@ -94,6 +92,10 @@ input {
   padding-bottom: 15px;
   margin-bottom: 15px;
   border-bottom: 1px solid #025e82;
+  border-top: 1px solid #025e82;
+  margin-top: 15px;
+  padding-top:15px;
+
 }
 
 input, select {
@@ -102,4 +104,9 @@ input, select {
   margin-bottom: 10px;
   border-radius: 5px;
   border:1px solid #025e82;
+}
+
+.filter, .search {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
 }
