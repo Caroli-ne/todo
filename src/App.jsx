@@ -79,7 +79,7 @@ const [sort, setSort] = useState("Asc");
   return <div className="app">
     <h1>Lista de Tarefas</h1>
     <Search search={search} setSearch={setSearch}/>
-    <Filter filter={filter} setFilter={setFilter} Sort={setSort}/>
+    <Filter filter={filter} setFilter={setFilter} setSort={setSort}/>
     <div className="todoList">
       {todos
       .filter((todo) => filter === "All" ? true : filter === "Completed" ? todo.completed : !todo.completed)
