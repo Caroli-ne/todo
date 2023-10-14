@@ -15,7 +15,7 @@ return (
     </div>
     <div>
         <FontAwesomeIcon icon={faCheckCircle} color="#6DB65B" className='complete' onClick={() => completeTodo(todo.id)}/>
-        <FontAwesomeIcon className="edit" icon={faPenToSquare} onClick={() => editTodo(todo.id)} />
+        <FontAwesomeIcon className="edit" icon={faPenToSquare}  onClick={() => editTodo(todo.id)} />
         <FontAwesomeIcon className="delete" icon={faTrash} onClick={() => deleteTodo(todo.id)} />
     </div>
 </div>
