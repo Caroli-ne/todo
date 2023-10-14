@@ -1,5 +1,9 @@
 import React from 'react'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
+
 const Todo = ({todo, deleteTodo, completeTodo, editTodo}) => {
 return (
 <div className="todo" style={{textDecoration: todo.completed ? "line-through": ""}}>
@@ -9,8 +13,8 @@ return (
     </div>
     <div>
         <button className='complete' onClick={() => completeTodo(todo.id)}>Completar</button>
-        <button className='edit' onClick={() => editTodo (todo.id) } >Editar</button>
-        <button className='delete' onClick={() => deleteTodo(todo.id)}>X</button>
+        <FontAwesomeIcon className="edit" icon={faPenToSquare} onClick={() => editTodo(todo.id)} />
+        <FontAwesomeIcon className="delete" icon={faTrash} onClick={() => deleteTodo(todo.id)} />
     </div>
 </div>
 )
