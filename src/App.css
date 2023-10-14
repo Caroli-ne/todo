@@ -44,29 +44,32 @@ p{
 .delete {
   margin-left: 20px;
   cursor: pointer;
+  scale:1.3;
 }
 
 .delete:hover{
-  scale: 1.2;
+  scale: 1.4;
   
 }
 
 .edit { 
   margin-left: 20px;
   cursor: pointer;
+  scale:1.3;
 }
 
 .edit:hover{
-  scale: 1.2;
+  scale: 1.4;
 } 
 .complete {
-  background-color: rgb(29, 212, 29);
-  opacity: 0.8;
+  scale: 1.5;
+  cursor: pointer;
 }
 
 .complete:hover{
-background-color: rgb(29, 212, 29);
 opacity:1.0;
+scale: 1.8;
+transition: 0.3s;
 }
 
 input {
