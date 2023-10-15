@@ -11,6 +11,7 @@ Para rodar o projeto em sua máquina, é necessário que você tenha o node inst
 - [Node.js](https://nodejs.org/en/)
 - [React](https://react.dev/learn)
 - [Vite](https://vitejs.dev/)
+- [uuid](https://www.npmjs.com/package/uuid)
 - [FontAwesome](https://fontawesome.com/v5/docs/web/use-with/react)
 
  ## Executando o projeto
