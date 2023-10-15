@@ -1,6 +1,6 @@
 import { useState } from 'react'
+import { v4 as uuidv4 } from 'uuid';
 import "./App.css";
-
 import Todo from './components/Todo';
 import Todoform from './components/Todoform';
 import Search from './components/Search';
@@ -23,7 +23,7 @@ function App() {
     },
     {
       id:3,
-      text:"Estudar React",
+      text:"Passear no parque",
       category:"Circunstancial",
       completed:false,
     },
@@ -32,7 +32,7 @@ function App() {
   const addTodo = (text, category) =>{
     
     const newTodos = [...todos,{
-      id:Math.floor(Math.random() * 10000),
+      id:uuidv4(),
       text,
       category,
       completed: false,
@@ -41,18 +41,14 @@ function App() {
   setTodos(newTodos);
 };
 
-const deleteTodo = (id) => {
-  const newTodos = [...todos]
-  const filteredTodos = newTodos.filter((todo) => 
-    todo.id !== id ? todo:null
-  );
-  setTodos(filteredTodos);
-}
+const deleteTodo = (id) => setTodos(todos.filter((todo) => todo.id !== id));
 
 const completeTodo = (id) => {
-  const newTodos = [...todos]
-  newTodos.map((todo) => todo.id === id? todo.completed = !todo.completed :todo )
-  setTodos(newTodos);
+  setTodos(
+    todos.map((todo) =>
+      todo.id === id ? { ...todo, completed: !todo.completed } : todo
+    )
+  );
 }
 
 const editTodo = (id) => {
